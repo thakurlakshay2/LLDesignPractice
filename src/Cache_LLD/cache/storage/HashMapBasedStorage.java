@@ -1,25 +1,25 @@
 package Cache_LLD.cache.storage;
 
+import Cache_LLD.cache.exceptions.NotFoundException;
+import Cache_LLD.cache.exceptions.StorageFullException;
 import com.sun.jdi.Value;
 
 import java.util.HashMap;
 
 public class HashMapBasedStorage<Key,Value> implements StoragePolicyInterface<Key,Value> {
     private final HashMap<Key,Value> storage;
-    private final int capacity;
-    public HashMapBasedStorage(int capacity) {
+    public HashMapBasedStorage() {
         storage=new HashMap<Key, Value>();
-        this.capacity=capacity;
     }
 
     @Override
-    public void put(Key key, Value value)  throws  StorageFullException{
+    public void put(Key key, Value value)  throws StorageFullException {
 
         storage.put(key,value);
     }
 
     @Override
-    public Value get(Key key)   throws  NotFoundException{
+    public Value get(Key key)   throws NotFoundException {
 
         return storage.get(key);
     }

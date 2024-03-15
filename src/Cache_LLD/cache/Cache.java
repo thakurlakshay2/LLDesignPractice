@@ -1,11 +1,16 @@
 package Cache_LLD.cache;
 
-public class Cache {
-    private final EvictionPolicy<Key> evictionPolicy;
-    private final CacheStorage<Key,Value> cacheStorage;
-˛
+import Cache_LLD.cache.exceptions.NotFoundException;
+import Cache_LLD.cache.exceptions.StorageFullException;
+import Cache_LLD.cache.policies.EvictionPolicyInterface;
+import Cache_LLD.cache.storage.StoragePolicyInterface;
 
-    public Cache(EvictionPolicy<Key> evictionPolicy, CacheStorage<Key, Value> cacheStorage) {
+public class Cache<Key,Value> {
+    private final EvictionPolicyInterface<Key> evictionPolicy;
+    private final StoragePolicyInterface<Key,Value> cacheStorage;
+
+
+    public Cache(EvictionPolicyInterface<Key> evictionPolicy, StoragePolicyInterface<Key, Value> cacheStorage) {
         this.evictionPolicy = evictionPolicy;
         this.cacheStorage = cacheStorage;
     }
@@ -19,7 +24,7 @@ public class Cache {
             Key keytoRemove=evictionPolicy.removeKey();
             if(keytoRemove==null){
                 throw new RuntimeException("Some error occured , cache was already empty . this task cannot be completed");
-                return ;
+
             }
             cacheStorage.remove(key);
             cacheStorage.put(key,value);
@@ -37,4 +42,5 @@ public class Cache {
             return null;
         }
     }
+
 }
