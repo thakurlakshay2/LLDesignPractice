@@ -1,5 +1,8 @@
 package BattleShip.strategy;
 
+import BattleShip.model.Player;
+import BattleShip.model.PlayerChanceATarget;
+
 public class LocalChanceGenerator implements IChanceGeneratorStrategy {
 
     @Override
@@ -17,6 +20,6 @@ public class LocalChanceGenerator implements IChanceGeneratorStrategy {
        if(targetPlayer==null){
            throw new InvalidInputException();
        }
-       return new PlayerChanceTarget(targetPlayer,new Coordinate(playerInput.getTargetX(),playerInput.getTargetY()))
+       return new PlayerChanceATarget(targetPlayer,new Coordinate(playerInput.getTargetX(),playerInput.getTargetY()))
     }
 }

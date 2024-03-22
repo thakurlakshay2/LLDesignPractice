@@ -1,6 +1,9 @@
 package BattleShip.model;
 
+import BattleShip.model.boundary.IBoundary;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Board {
     private  final List<BoardItem> ships;
@@ -45,5 +48,20 @@ public class Board {
         }
 
         return hitLocationList;
+    }
+
+    public List<Coordinate> missLocations(){
+        final List<Coordinate> result=new ArrayList<;
+        for(Coordinate coordinate: allBombsLocation){
+            boolean doesBelongToShip=false;
+            for(BoardItem ship:ships){
+                if(ship.containsCoordinate(coordinate)){
+                    doesBelongToShip=true;
+                    break;
+                }
+            }
+        }
+
+        return result;
     }
 }

@@ -1,5 +1,7 @@
 package BattleShip.model.boundary;
 
+import BattleShip.model.Coordinate;
+
 import java.util.ArrayList;
 import java.util.List;
 

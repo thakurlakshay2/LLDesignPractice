@@ -11,6 +11,10 @@ public class Player {
 
     private final IChanceGeneratorStrategy chanceGeneratorStragergy;
 
+
+    public int getId(){
+        return id;
+    }
    public PlayerChanceTarget takeChance(List<Player> allPlayers){
        List<Player> opponents= new ArrayList<>();
 
