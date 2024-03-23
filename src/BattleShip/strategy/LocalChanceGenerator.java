@@ -3,10 +3,12 @@ package BattleShip.strategy;
 import BattleShip.model.Player;
 import BattleShip.model.PlayerChanceATarget;
 
+import java.util.List;
+
 public class LocalChanceGenerator implements IChanceGeneratorStrategy {
 
     @Override
-    public PlayerChanceTarget getPlayerChanceTarget(List<Player> opponents) {
+    public PlayerChanceATarget getPlayerChanceTarget(List<Player> opponents) {
        final PlayerInput playerInput=inputProvider.takeInput();
        Player targetPlayer=null;
 

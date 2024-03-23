@@ -1,10 +1,11 @@
 package BattleShip.strategy;
 
 import BattleShip.model.Player;
+import BattleShip.model.PlayerChanceATarget;
 
 import java.util.List;
 
 public interface IChanceGeneratorStrategy {
 
-    PlayerChanceTarget getPlayerChanceTarget(List<Player> opponents);
+    PlayerChanceATarget getPlayerChanceTarget(List<Player> opponents);
 }

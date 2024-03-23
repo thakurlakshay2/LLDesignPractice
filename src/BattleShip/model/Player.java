@@ -3,6 +3,7 @@ package BattleShip.model;
 import BattleShip.strategy.IChanceGeneratorStrategy;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Player {
 
@@ -15,11 +16,11 @@ public class Player {
     public int getId(){
         return id;
     }
-   public PlayerChanceTarget takeChance(List<Player> allPlayers){
+   public PlayerChanceATarget takeChance(List<Player> allPlayers){
        List<Player> opponents= new ArrayList<>();
 
        for(Player player:allPlayers){
-           if(player.getId!=getId()){
+           if(player.getId()!=getId()){
                opponents.add(player);
            }
        }
