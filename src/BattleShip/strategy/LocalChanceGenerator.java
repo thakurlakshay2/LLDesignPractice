@@ -24,4 +24,6 @@ public class LocalChanceGenerator implements IChanceGeneratorStrategy {
        }
        return new PlayerChanceATarget(targetPlayer,new Coordinate(playerInput.getTargetX(),playerInput.getTargetY()))
     }
+
+
 }

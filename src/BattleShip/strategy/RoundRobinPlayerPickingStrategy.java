@@ -15,6 +15,6 @@ public class RoundRobinPlayerPickingStrategy implements  IPlayerPickingStrategy 
 
     @Override
     public Integer pickNextPlayer(Integer currentPlayerIndex, List<Player> allPlayers) {
-        return (currentPlayerIndex+1)%allPlayers.size()
+        return (currentPlayerIndex+1)%allPlayers.size();
     }
 }

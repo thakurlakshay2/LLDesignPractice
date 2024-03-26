@@ -3,6 +3,7 @@ package BattleShip;
 import BattleShip.model.Player;
 import BattleShip.model.PlayerChanceATarget;
 import BattleShip.strategy.IPlayerPickingStrategy;
+import BattleShip.strategy.IWinnerStrategy;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class GameLoop {
 
     private final IPlayerPickingStrategy nextPlayerStrategy;
 
-    public GameLoop(List<Player> players, IWinnerStrategy winnerStrategy, IOutputPrinter printer, IPlayerOickingStrategy nextPlayerStrategy) {
+    public GameLoop(List<Player> players, IWinnerStrategy winnerStrategy, IOutputPrinter printer, IPlayerPickingStrategy nextPlayerStrategy) {
         this.players = players;
         this.winnerStrategy = winnerStrategy;
         this.printer = printer;
@@ -46,4 +47,6 @@ public class GameLoop {
             currentPlayerIndex=nextPlayerStrategy.pickNextPlayer(currentPlayerIndex,this.players);
         }
     }
+
+
 }
