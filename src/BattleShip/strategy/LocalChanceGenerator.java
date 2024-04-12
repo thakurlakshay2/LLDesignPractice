@@ -22,7 +22,7 @@ public class LocalChanceGenerator implements IChanceGeneratorStrategy {
        if(targetPlayer==null){
            throw new InvalidInputException();
        }
-       return new PlayerChanceATarget(targetPlayer,new Coordinate(playerInput.getTargetX(),playerInput.getTargetY()))
+       return new PlayerChanceATarget(targetPlayer,new Coordinate(playerInput.getTargetX(),playerInput.getTargetY()));
     }
 
 

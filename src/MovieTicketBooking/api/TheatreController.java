@@ -15,8 +15,8 @@ public class TheatreController {
         return theatreService.createScreenInTheatre(screenName,theatre).getId();
     }
 
-    public final createSeatInScreen(final Integer rowNo, final Integer seatNo, final String screenId){
-        final Screen screen=theatreService.getScreen(screenId);
-        return theatreService.createSeatInScreen(rowNo,seatNo,screen);
-    }
+//    public final createSeatInScreen(final Integer rowNo, final Integer seatNo, final String screenId){
+//        final Screen screen=theatreService.getScreen(screenId);
+//        return theatreService.createSeatInScreen(rowNo,seatNo,screen);
+//    }
 }

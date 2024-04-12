@@ -51,7 +51,7 @@ public class Board {
     }
 
     public List<Coordinate> missLocations(){
-        final List<Coordinate> result=new ArrayList<;
+        final List<Coordinate> result=new ArrayList<>();
         for(Coordinate coordinate: allBombsLocation){
             boolean doesBelongToShip=false;
             for(BoardItem ship:ships){
