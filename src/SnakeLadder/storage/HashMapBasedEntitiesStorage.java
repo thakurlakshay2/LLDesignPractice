@@ -1,7 +1,9 @@
 package SnakeLadder.storage;
 
 import SnakeLadder.Exceptions.LadderAlreadyPlacedException;
+import SnakeLadder.Exceptions.OutSideBoundaryException;
 import SnakeLadder.Exceptions.SnakeAlreadyPlacedException;
+import SnakeLadder.model.Board;
 import SnakeLadder.model.Player;
 
 import java.util.ArrayList;
@@ -16,17 +18,23 @@ public class HashMapBasedEntitiesStorage implements EntitiesStorage {
 
     private List<Player> allPlayers;
 
-    public HashMapBasedEntitiesStorage() {
+    private Board board;
+
+    public HashMapBasedEntitiesStorage(Board board) {
         this.snakes = new HashMap<>();
         this.ladders = new HashMap<>();
         this.players = new HashMap<>();
         this.allPlayers=new ArrayList<>();
+        this.board=board;
     }
 
     @Override
     public void setLadder(int startPos, int endPos) {
         if(ladders.containsKey(endPos)){
             throw new LadderAlreadyPlacedException(endPos);
+        }
+        if(startPos>board.getBoardSize() || endPos>board.getBoardSize() || startPos<1 || endPos<1){
+            throw new OutSideBoundaryException();
         }
         ladders.put(startPos,endPos);
     }
@@ -35,6 +43,9 @@ public class HashMapBasedEntitiesStorage implements EntitiesStorage {
     public void setSnake(int startPos, int endPos){
         if(snakes.containsKey(startPos)){
             throw new SnakeAlreadyPlacedException(startPos);
+        }
+        if(startPos>board.getBoardSize() || endPos>board.getBoardSize() || startPos<1 || endPos<1){
+            throw new OutSideBoundaryException();
         }
         snakes.put(startPos,endPos);
     }

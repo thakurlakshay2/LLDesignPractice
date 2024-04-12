@@ -1,6 +1,7 @@
 package SnakeLadder.service;
 
 import SnakeLadder.Strategy.IPlayerPickingStrategy;
+import SnakeLadder.model.Board;
 import SnakeLadder.model.Dice;
 import SnakeLadder.model.Player;
 import SnakeLadder.storage.EntitiesStorage;
@@ -13,15 +14,18 @@ public class GameService {
 
     private final Dice dice;
     private final EntitiesStorage storage;
+
+    private final Board boardObj;
     private final IBoardStorage board;
     private final IPlayerPickingStrategy playerPickingStrategy;
 
 
-    public GameService(int diceNumber, EntitiesStorage storage, IBoardStorage board, IPlayerPickingStrategy playerPickingStrategy) {
+    public GameService(int diceNumber, EntitiesStorage storage, IBoardStorage board, IPlayerPickingStrategy playerPickingStrategy, Board boardObj) {
         this.dice=new Dice(diceNumber);
         this.playerPickingStrategy=playerPickingStrategy;
         this.storage=storage;
         this.board=board;
+        this.boardObj=boardObj;
     }
 
     public void startGame(){
@@ -38,7 +42,7 @@ public class GameService {
               int endPosition=currentPosition+diceRoll;
 
                 String s1="";
-              if(checkforNumberLessThanOrEqualThan100(endPosition)) {
+              if(checkforNumberLessThanOrEqualThanBoardSize(endPosition)) {
                   //
                   sb.append(" rolled a " + diceRoll);
                   sb.append(" and moved from " + currentPosition + " position to " + endPosition + " position");
@@ -58,7 +62,7 @@ public class GameService {
 
 
               }
-              if(board.getPlayerPosition(playerId)==100){
+              if(board.getPlayerPosition(playerId)==boardObj.getBoardSize() ){
                   System.out.println(storage.getPlayerName(playerId)+" WON!!!");
                   break;
               }
@@ -69,8 +73,8 @@ public class GameService {
 
     }
 
-    private boolean checkforNumberLessThanOrEqualThan100(int endPos){
-       return endPos<=100;
+    private boolean checkforNumberLessThanOrEqualThanBoardSize(int endPos){
+       return endPos<=boardObj.getBoardSize();
     }
     private void initilizePlayersStartValue(){
         List<Player> allPlayers=storage.getAllPlayers();

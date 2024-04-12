@@ -2,6 +2,7 @@ package SnakeLadder;
 
 import SnakeLadder.Strategy.IPlayerPickingStrategy;
 import SnakeLadder.Strategy.RoundRobinPlayerPickingStrategy;
+import SnakeLadder.model.Board;
 import SnakeLadder.service.*;
 import SnakeLadder.storage.BoardStorage;
 import SnakeLadder.storage.EntitiesStorage;
@@ -11,9 +12,11 @@ import SnakeLadder.storage.IBoardStorage;
 public class Main {
 
     public static void main(String[] args) {
-        EntitiesStorage hashMapBasedEntitiesStorage=new HashMapBasedEntitiesStorage();
+        Board newBoard=new Board(100);
+        EntitiesStorage hashMapBasedEntitiesStorage=new HashMapBasedEntitiesStorage(newBoard);
         IBoardStorage board=new BoardStorage();
         IPlayerPickingStrategy playerPickingStrategy=new RoundRobinPlayerPickingStrategy();
+
         InputService snakeInput=new SnakeInputService(hashMapBasedEntitiesStorage);
         snakeInput.getInput();
 
@@ -24,11 +27,8 @@ public class Main {
         playerInput.getInput();
 
 
-        GameService gameService=new GameService(6,hashMapBasedEntitiesStorage,board ,playerPickingStrategy);
+        GameService gameService=new GameService(6,hashMapBasedEntitiesStorage,board ,playerPickingStrategy,newBoard);
         gameService.startGame();
-
-
-
 
 
     }
