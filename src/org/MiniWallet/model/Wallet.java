@@ -1,10 +1,6 @@
 package org.MiniWallet.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
-@Data
-@AllArgsConstructor
 public class Wallet {
   String walletId;
   Double balance;

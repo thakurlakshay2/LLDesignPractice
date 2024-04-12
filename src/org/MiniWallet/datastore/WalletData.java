@@ -1,6 +1,5 @@
 package org.MiniWallet.datastore;
 
-import lombok.Getter;
 import org.MiniWallet.exceptions.NoWalletFoundException;
 import org.MiniWallet.exceptions.WalletAlreadyExist;
 import org.MiniWallet.model.Wallet;
@@ -9,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-@Getter
 public class WalletData {
    public Map<String, Wallet> walletIdToWallet = new HashMap();
   public Map<String, String> userIdToWalletId = new HashMap<>();
