@@ -1,5 +1,8 @@
 package CabBookingSystem.problemStatement.controllers;
 
+import CabBookingSystem.problemStatement.database.CabsManager;
+import CabBookingSystem.problemStatement.database.TripsManager;
+
 public class CabsController {
     private CabsManager cabsManager;
     private TripsManager tripsManager;
