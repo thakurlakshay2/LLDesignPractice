@@ -1,4 +1,7 @@
 package CabBookingSystem.problemStatement.exceptions;
 
-public class CabNotFoundExceptions {
+public class CabNotFoundExceptions extends RuntimeException {
+    public CabNotFoundExceptions(){
+        super("Cab not found  ");
+    }
 }

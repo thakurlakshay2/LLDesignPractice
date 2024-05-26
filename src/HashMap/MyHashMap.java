@@ -4,7 +4,7 @@ package HashMap;
 import java.util.HashMap;
 
 public class MyHashMap<K,V> {
-    private static int INITIAL_SIZE=1<<4 //16
+    private static int INITIAL_SIZE=1<<4; //16
     private static final int MAXIIMUM_CAPACITY=1<<30;
 
     public Entry[] hashTable;

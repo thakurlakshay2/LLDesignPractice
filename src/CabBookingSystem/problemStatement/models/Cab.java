@@ -13,7 +13,33 @@ public class Cab {
         this.isAvailable=true;
     }
 
+    //setters
     public void setAvailable(Boolean available) {
         isAvailable = available;
+    }
+
+    public void setCurrentLocation(Location currentLocation) {
+        this.currentLocation = currentLocation;
+    }
+
+    public void setCurrentTrip(Trip currentTrip) {
+        this.currentTrip = currentTrip;
+    }
+
+    //getters
+    public String getId() {
+        return id;
+    }
+
+    public Boolean getAvailable() {
+        return isAvailable;
+    }
+
+    public Location getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public Trip getCurrentTrip() {
+        return currentTrip;
     }
 }
