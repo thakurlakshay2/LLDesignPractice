@@ -2,7 +2,9 @@ package CabBookingSystem.problemStatement.controllers;
 
 import CabBookingSystem.problemStatement.database.CabsManager;
 import CabBookingSystem.problemStatement.database.TripsManager;
+import CabBookingSystem.problemStatement.models.Cab;
 import CabBookingSystem.problemStatement.models.Location;
+import org.springframework.http.ResponseEntity;
 
 public class CabsController {
     private CabsManager cabsManager;

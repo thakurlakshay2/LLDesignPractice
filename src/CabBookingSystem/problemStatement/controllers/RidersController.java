@@ -2,12 +2,18 @@ package CabBookingSystem.problemStatement.controllers;
 
 import CabBookingSystem.problemStatement.database.RIdersManager;
 import CabBookingSystem.problemStatement.database.TripsManager;
+import CabBookingSystem.problemStatement.models.Location;
+import CabBookingSystem.problemStatement.models.Rider;
+import CabBookingSystem.problemStatement.models.Trip;
+import org.springframework.http.ResponseEntity;
+
+import java.util.List;
 
 public class RidersController {
     private RIdersManager ridersManager;
     private TripsManager tripsManager;
 
-    public RidersController(RidersManager ridersManager, TripsManager tripsManager){
+    public RidersController(RIdersManager ridersManager, TripsManager tripsManager){
         this.ridersManager= ridersManager;
         this.tripsManager=tripsManager;
     }
@@ -30,7 +36,7 @@ public class RidersController {
     }
 
     public ResponseEntity fetchHistory(final String riderId){
-        List<Trips> trips=tripsManager.tripHistory(ridersManager.getRider(riderId));
+        List<Trip> trips=tripsManager.tripHistory(ridersManager.getRider(riderId));
         return ResponseEntity.ok("");
     }
 }
