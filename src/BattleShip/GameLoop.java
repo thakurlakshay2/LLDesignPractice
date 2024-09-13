@@ -30,22 +30,26 @@ public class GameLoop {
             printer.printMsg("\n\nPlayer:"+currentPlayer.getId() + " chance");
 
             final PlayerChanceATarget playerChanceATarget= currentPlayer.takeChance(this.players);
-            try{
+//            try{
                 playerChanceATarget.getTargetPlayer().takeHit(playerChanceATarget.getTarget());
-            }catch(CoordinateOutOfBoundException exception){
-                printer.printMsg("Hit Was out of bound");
-            }
+//            }
+//            catch(){
+//                printer.printMsg("Hit Was out of bound");
+//            }
 
             printer.printSelfBoard(currentPlayer);
             printer.printOpponentBoard(players,currentPlayer);
 
             final Player winner= winnerStrategy.getWinner(players);
             if(winner!=null){
-                printer.printMsg(winner);
+                printer.printMsg(winner.toString());
                 break;
             }
             currentPlayerIndex=nextPlayerStrategy.pickNextPlayer(currentPlayerIndex,this.players);
         }
+    }
+
+    private void printMsg(String startingGame) {
     }
 
 
