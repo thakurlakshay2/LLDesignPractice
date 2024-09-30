@@ -1,9 +1,12 @@
-package ParkingLotSystem.Models;
+package ParkingLotSystem.ParkingLotSystem.Models;
+
+import ParkingLotSystem.Models.ParkingSpotType;
+import ParkingLotSystem.Models.Vehicle;
 
 public class ParkingSpot {
     private final int number;
-    private  ParkingSpotType type;
-    private  Vehicle vehicle;
+    private ParkingSpotType type;
+    private Vehicle vehicle;
     private boolean isFree;
 
     public ParkingSpot(int number, ParkingSpotType type) {
