@@ -1,4 +1,4 @@
-package ParkingLotSystem.ParkingLotSystem.Strategy;
+package ParkingLotSystem.Strategy;
 
 
 import ParkingLotSystem.Models.ParkingSpot;

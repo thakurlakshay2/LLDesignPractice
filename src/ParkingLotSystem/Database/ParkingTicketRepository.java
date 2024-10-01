@@ -1,4 +1,4 @@
-package ParkingLotSystem.ParkingLotSystem.Database;
+package ParkingLotSystem.Database;
 
 import ParkingLotSystem.Models.ParkingLot;
 import ParkingLotSystem.Models.ParkingTicket;
