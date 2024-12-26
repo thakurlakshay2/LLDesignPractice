@@ -1,9 +1,9 @@
-package FlipkartRound1.Repository.impl;
+package Upi_FlipkartRound.Repository.impl;
 
-import FlipkartRound1.Exceptions.DuplicatePhoneNumberException;
-import FlipkartRound1.Models.BankAccount;
-import FlipkartRound1.Models.User;
-import FlipkartRound1.Repository.UserRepository;
+import Upi_FlipkartRound.Exceptions.DuplicatePhoneNumberException;
+import Upi_FlipkartRound.Models.BankAccount;
+import Upi_FlipkartRound.Models.User;
+import Upi_FlipkartRound.Repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;

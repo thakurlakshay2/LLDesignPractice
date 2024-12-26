@@ -1,4 +1,4 @@
-package FlipkartRound1.Exceptions;
+package Upi_FlipkartRound.Exceptions;
 
 public class PaymentException extends RuntimeException{
     public PaymentException(String message) {

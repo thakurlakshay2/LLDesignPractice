@@ -1,6 +1,6 @@
-package FlipkartRound1.dto;
+package Upi_FlipkartRound.dto;
 
-import FlipkartRound1.Models.TransactionStatus;
+import Upi_FlipkartRound.Models.TransactionStatus;
 
 import java.time.LocalDateTime;
 

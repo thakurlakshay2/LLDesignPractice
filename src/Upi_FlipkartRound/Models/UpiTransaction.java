@@ -1,6 +1,6 @@
-package FlipkartRound1.Models;
+package Upi_FlipkartRound.Models;
 
-import FlipkartRound1.Exceptions.PaymentException;
+import Upi_FlipkartRound.Exceptions.PaymentException;
 
 public class UpiTransaction  extends Transaction{
 

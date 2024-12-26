@@ -1,7 +1,7 @@
-package FlipkartRound1.Repository.impl;
+package Upi_FlipkartRound.Repository.impl;
 
-import FlipkartRound1.Models.Bank;
-import FlipkartRound1.Repository.BankRepository;
+import Upi_FlipkartRound.Models.Bank;
+import Upi_FlipkartRound.Repository.BankRepository;
 
 import java.util.ArrayList;
 import java.util.List;

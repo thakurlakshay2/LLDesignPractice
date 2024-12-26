@@ -1,14 +1,14 @@
-package FlipkartRound1;
+package Upi_FlipkartRound;
 
-import FlipkartRound1.Models.Bank;
-import FlipkartRound1.Models.BankAccount;
-import FlipkartRound1.Models.Transaction;
-import FlipkartRound1.Models.User;
-import FlipkartRound1.Repository.BankRepository;
-import FlipkartRound1.Repository.UserRepository;
-import FlipkartRound1.Repository.impl.InMemoryBankResository;
-import FlipkartRound1.Repository.impl.InMemoryUserRepository;
-import FlipkartRound1.Service.PaymentService;
+import Upi_FlipkartRound.Models.Bank;
+import Upi_FlipkartRound.Models.BankAccount;
+import Upi_FlipkartRound.Models.Transaction;
+import Upi_FlipkartRound.Models.User;
+import Upi_FlipkartRound.Repository.BankRepository;
+import Upi_FlipkartRound.Repository.UserRepository;
+import Upi_FlipkartRound.Repository.impl.InMemoryBankResository;
+import Upi_FlipkartRound.Repository.impl.InMemoryUserRepository;
+import Upi_FlipkartRound.Service.PaymentService;
 
 
 public class Main {

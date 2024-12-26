@@ -1,10 +1,10 @@
-package FlipkartRound1.Strategy;
+package Upi_FlipkartRound.Strategy;
 
-import FlipkartRound1.Exceptions.PaymentException;
-import FlipkartRound1.Models.Transaction;
-import FlipkartRound1.Models.TransactionStatus;
-import FlipkartRound1.Repository.TransactionRepository;
-import FlipkartRound1.Repository.UserRepository;
+import Upi_FlipkartRound.Exceptions.PaymentException;
+import Upi_FlipkartRound.Models.Transaction;
+import Upi_FlipkartRound.Models.TransactionStatus;
+import Upi_FlipkartRound.Repository.TransactionRepository;
+import Upi_FlipkartRound.Repository.UserRepository;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;

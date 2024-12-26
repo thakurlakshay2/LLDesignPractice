@@ -1,4 +1,4 @@
-package FlipkartRound1.Exceptions;
+package Upi_FlipkartRound.Exceptions;
 
 public class DuplicatePhoneNumberException extends RuntimeException {
     public DuplicatePhoneNumberException(String message) {

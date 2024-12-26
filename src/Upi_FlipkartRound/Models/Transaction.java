@@ -1,4 +1,4 @@
-package FlipkartRound1.Models;
+package Upi_FlipkartRound.Models;
 
 import java.time.Duration;
 import java.time.LocalDateTime;

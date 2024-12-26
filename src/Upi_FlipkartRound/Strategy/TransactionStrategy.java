@@ -1,7 +1,7 @@
-package FlipkartRound1.Strategy;
+package Upi_FlipkartRound.Strategy;
 
-import FlipkartRound1.Models.Transaction;
-import FlipkartRound1.Models.TransactionStatus;
+import Upi_FlipkartRound.Models.Transaction;
+import Upi_FlipkartRound.Models.TransactionStatus;
 
 import java.util.concurrent.CompletableFuture;
 
